@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafsan Alam — Portfolio</title>
+  <meta name="description" content="Portfolio of Rafsan Alam, developer and designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply the saved (or system) theme before the page paints to avoid a flash.
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem("theme"); } catch (e) {}
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="logo">RA<span>.</span></a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact" class="btn btn-small">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Rafsan Alam.</h1>
+      <h2>I build things for the web.</h2>
+      <p class="lead">
+        I'm a developer focused on crafting clean, accessible, and fast digital
+        experiences. Currently open to new opportunities and collaborations.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">View my work</a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container reveal">
+      <h3 class="section-title"><span>01.</span> About Me</h3>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hello! I enjoy creating things that live on the internet. My interest
+            in web development started years ago, and since then I've worked on
+            everything from small personal sites to full-scale applications.
+          </p>
+          <p>
+            My main focus these days is building accessible, inclusive products
+            and digital experiences. When I'm not at the computer, you'll find me
+            reading, hiking, or experimenting with new recipes.
+          </p>
+        </div>
+        <div class="about-avatar" aria-hidden="true">
+          <div class="avatar">RA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container reveal">
+      <h3 class="section-title"><span>02.</span> Projects</h3>
+      <div class="project-grid">
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <a href="#" class="card-link" aria-label="View project">↗</a>
+          </div>
+          <h4>Task Manager App</h4>
+          <p>A minimalist productivity app with drag-and-drop boards, dark mode, and offline support.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>IndexedDB</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <a href="#" class="card-link" aria-label="View project">↗</a>
+          </div>
+          <h4>Weather Dashboard</h4>
+          <p>Real-time forecasts with interactive charts and location search, built on a public weather API.</p>
+          <ul class="tags"><li>JavaScript</li><li>Chart.js</li><li>REST API</li></ul>
+        </article>
+        <article class="card">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <a href="#" class="card-link" aria-label="View project">↗</a>
+          </div>
+          <h4>E-commerce Storefront</h4>
+          <p>A responsive online shop with cart, checkout flow, and a lightweight headless CMS.</p>
+          <ul class="tags"><li>Next.js</li><li>Node</li><li>Stripe</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container reveal">
+      <h3 class="section-title"><span>03.</span> Skills</h3>
+      <ul class="skills">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li>
+        <li>React</li><li>Node.js</li><li>Python</li><li>SQL</li>
+        <li>Git</li><li>Figma</li><li>Accessibility</li><li>Responsive Design</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container reveal">
+      <h3 class="section-title"><span>04.</span> Contact</h3>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h4>Let's work together</h4>
+          <p>
+            Have a project in mind or just want to say hi? Fill out the form and
+            I'll get back to you as soon as I can.
+          </p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:rafsanalam09@gmail.com">rafsanalam09@gmail.com</a></li>
+            <li><span>Location</span>Sylhet, Bangladesh</li>
+          </ul>
+          <div class="socials">
+            <a href="https://github.com/rafsan0079" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/rafsan-alam-4b5428221/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.facebook.com/rafsan.alam.31/" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-full">Send Message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Rafsan Alam. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
